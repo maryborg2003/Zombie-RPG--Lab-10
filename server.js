@@ -6,11 +6,17 @@ const app = express();
 app.use(express.json());
 app.use(express.static("express"));
 
-// default URL for website
-app.use('/', function(req,res){
+app.use('/home', function(req,res){
     res.sendFile(path.join(__dirname+'/express/js/zomb1.html'));
-    //__dirname : It will resolve to your project folder.
   });
+
+app.use('/game', function(req,res){
+  res.sendFile(path.join(__dirname+'/express/js/zomb2.html'));
+});
+
+app.use('/about', function(req,res){
+  res.sendFile(path.join(__dirname+'/express/js/zombieaboutpage.html'));
+});
 
 const server = http.createServer(app);
 const port = 8383;
