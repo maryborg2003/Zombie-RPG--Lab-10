@@ -19,7 +19,7 @@ app.use('/about', function(req,res){
 });
 
 const server = http.createServer(app);
-const port = 8383;
+const port = 5500;
 server.listen(port);
 
 console.debug('Server listening on port ' + port);
