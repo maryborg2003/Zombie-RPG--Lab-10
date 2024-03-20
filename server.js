@@ -27,7 +27,6 @@ app.get("/prices", (req, res) => {
 */
 
 const app = express();
-// app.use(express.json());
 app.use(express.static("."));
 
 app.get("/mary-info", function(req, res){
@@ -35,17 +34,6 @@ app.get("/mary-info", function(req, res){
     res.json("Mary Borg");
 
 })
-// app.use('/home', function(req,res){
-//     res.sendFile(path.join(__dirname+'/express/js/zomb1.html'));
-//   });
-
-// app.use('/game', function(req,res){
-//   res.sendFile(path.join(__dirname+'/express/js/zomb2.html'));
-// });
-
-// app.use('/about', function(req,res){
-//   res.sendFile(path.join(__dirname+'/express/js/zombieaboutpage.html'));
-// });
 
 app.listen(5050, function(){
   console.log("Server running")
