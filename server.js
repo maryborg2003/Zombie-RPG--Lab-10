@@ -35,6 +35,6 @@ app.get("/mary-info", function(req, res){
 
 })
 
-app.listen(5050, function(){
+app.listen(5500, function(){
   console.log("Server running")
 })
