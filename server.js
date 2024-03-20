@@ -1,4 +1,4 @@
-const http = require('http');
+
 const express = require('express');
 const path = require('path');
 
@@ -10,7 +10,7 @@ const pool = new Pool({
   server: 'localhost',
   database: 'postgres',
   password: '$HarrietPorter24',
-  port: 3000,
+  port: 5432,
 })
 
 app.get("/prices", (req, res) => {
@@ -27,23 +27,26 @@ app.get("/prices", (req, res) => {
 */
 
 const app = express();
-app.use(express.json());
-app.use(express.static("express"));
+// app.use(express.json());
+app.use(express.static("."));
 
-app.use('/home', function(req,res){
-    res.sendFile(path.join(__dirname+'/express/js/zomb1.html'));
-  });
+app.get("/mary-info", function(req, res){
 
-app.use('/game', function(req,res){
-  res.sendFile(path.join(__dirname+'/express/js/zomb2.html'));
-});
+    res.json("Mary Borg");
 
-app.use('/about', function(req,res){
-  res.sendFile(path.join(__dirname+'/express/js/zombieaboutpage.html'));
-});
+})
+// app.use('/home', function(req,res){
+//     res.sendFile(path.join(__dirname+'/express/js/zomb1.html'));
+//   });
 
-const server = http.createServer(app);
-const port = 5050;
-server.listen(port);
+// app.use('/game', function(req,res){
+//   res.sendFile(path.join(__dirname+'/express/js/zomb2.html'));
+// });
 
-console.debug('Server listening on port ' + port);
+// app.use('/about', function(req,res){
+//   res.sendFile(path.join(__dirname+'/express/js/zombieaboutpage.html'));
+// });
+
+app.listen(5050, function(){
+  console.log("Server running")
+})
