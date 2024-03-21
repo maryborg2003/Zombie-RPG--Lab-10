@@ -29,12 +29,6 @@ app.get("/prices", (req, res) => {
 const app = express();
 app.use(express.static("."));
 
-app.get("/mary-info", function(req, res){
-
-    res.json("Mary Borg");
-
-})
-
-app.listen(5500, function(){
-  console.log("Server running")
+app.listen(8383, function(){
+  console.log("Server running on port 8383")
 })
