@@ -1,15 +1,15 @@
 
 const express = require('express');
 const path = require('path');
-const bodyParser = require("body-parser")
-app.use(bodyParser.urlencoded({extended: true}));
+
+/*
 const Pool = require('pg').Pool;
 
 const pool = new Pool({
   database: 'postgres',
   server: 'localhost',
   database: 'postgres',
-  password: 'postgres',
+  password: '$HarrietPorter24',
   port: 5432,
 })
 
@@ -24,7 +24,7 @@ app.get("/prices", (req, res) => {
       res.status(200).json(results.rows)
   })
 });
-
+*/
 
 const app = express();
 app.use(express.static("."));
