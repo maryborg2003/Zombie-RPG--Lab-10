@@ -60,3 +60,16 @@ body {
     border-radius: 10px;
     margin-top: 10px; 
 }
+.home-d {
+    background-color:white; 
+    border-radius:20px;
+    padding: 10px; 
+    margin-top: 150px;
+    border-radius:12px;
+    border: 2px solid darkgray;
+    max-width:50%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    word-wrap: normal;
+}
