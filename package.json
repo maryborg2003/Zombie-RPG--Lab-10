@@ -8,13 +8,11 @@
     "dependencies": {
         "body-parser": "^1.20.2",
         "express": "^4.17.1",
-        "pg": "^8.11.3"
+        "pg": "^8.11.5"
     },
-    
     "story": {
-  "text": "In the not-so-distant future, a solar eclipse casts an eerie shadow over the world, bringing with it a mysterious virus that turns humans into relentless, mutated creatures. As society collapses, you discover rumors of a cure hidden in the heart of an abandoned city infested with zombies. As a survivor, your choices will determine the fate of not just yourself, but all the remnants of humanity."
+        "text": "In the not-so-distant future, a solar eclipse casts an eerie shadow over the world, bringing with it a mysterious virus that turns humans into relentless, mutated creatures. As society collapses, you discover rumors of a cure hidden in the heart of an abandoned city infested with zombies. As a survivor, your choices will determine the fate of not just yourself, but all the remnants of humanity."
     },
-
     "borgname": {
         "text": "Mary Borg"
     }

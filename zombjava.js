@@ -17,3 +17,21 @@ fetch('package.json')
     wrappedContent.textContent = storyText;
     storyContainer.appendChild(wrappedContent);
   });
+
+  $(function(){
+ 
+    $("form").submit(function(){
+       
+        const data = {
+            name: $("#personName").val(),
+            email: $("#personEmail").val(),
+            donation: $("#personDonation").val()
+        }
+
+        $.post( "/api/person/create", data, function( data ) {
+            console.log("Done");
+        });
+ 
+        return false;
+    });
+ });

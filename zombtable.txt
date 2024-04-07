@@ -1,0 +1,9 @@
+CREATE TABLE person (
+   name text,
+   email text,
+   donation numeric
+);
+
+INSERT INTO person VALUES ('John', 'john@gmail.com', 10);
+
+SELECT * FROM person;
