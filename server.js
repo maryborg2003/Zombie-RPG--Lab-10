@@ -10,12 +10,12 @@ const pool = new Pool({
    user: 'postgres',
    host: 'localhost',
    database: 'postgres',
-   password: 'postgres',
-   port: 5432,
+   password: '$HarrietPorter24',
+   port: 3000,
 });
 
-app.get("/api/product", (req, res) => {
-   const sql = "SELECT * FROM product";
+app.get("/api/person", (req, res) => {
+   const sql = "SELECT * FROM person";
 
    pool.query(sql, (error, results) => {
        if (error) throw error;
@@ -24,15 +24,15 @@ app.get("/api/product", (req, res) => {
    });
 });
 
-app.post("/api/product/create", (req, res) => {
+app.post("/api/person/create", (req, res) => {
    console.log(req.body);
 
-   const id = req.body.id;
-   const productname = req.body.productname; 
-   const price = req.body.price;
+   const name = req.body.name;
+   const email = req.body.email; 
+   const donation = req.body.donation;
 
-   const sql = "INSERT INTO product (id, productname, price) VALUES ($1, $2, $3)";
-   const data = [id, productname, price]; 
+   const sql = "INSERT INTO person (name, email, donation) VALUES ($1, $2, $3)";
+   const data = [name, email, donation]; 
 
    pool.query(sql, data, (error, results) => {
        if (error) throw error;

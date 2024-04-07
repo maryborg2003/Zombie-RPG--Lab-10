@@ -22,12 +22,12 @@ fetch('package.json')
     $("form").submit(function(){
        
         const data = {
-            id: $("#productId").val(),
-            productname: $("#productName").val(),
-            price: $("#productPrice").val()
+            name: $("#personName").val(),
+            email: $("#personEmail").val(),
+            donation: $("#personDonation").val()
         }
 
-        $.post( "/api/product/create", data, function( data ) {
+        $.post( "/api/person/create", data, function( data ) {
             console.log("Done");
         }); 
  
