@@ -3,3 +3,8 @@ CREATE TABLE person (
    email text,
    donation numeric
 );
+
+CREATE TABLE emails (
+    id SERIAL PRIMARY KEY,
+    sub VARCHAR(255) UNIQUE NOT NULL
+);

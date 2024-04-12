@@ -50,6 +50,43 @@ app.post("/api/person/create", (req, res) => {
    });
 });
 
-app.listen(5500, () => {
-   console.log("Listening on port 5500");
-});
+app.get("/api/emails", (req, res) => {
+    const sql = "SELECT * FROM emails";
+ 
+    pool.query(sql, (error, results) => {
+        if (error) throw error;
+ 
+        res.status(200).json(results.rows);
+    });
+ });
+ 
+ app.post("/api/emails/create", (req, res) => {
+    console.log(req.body);
+ 
+    
+    const sub = req.body.sub; 
+    
+ 
+    const sql = "INSERT INTO emails (sub) VALUES ($1)";
+    const data = [sub]; 
+ 
+    pool.query(sql, data, (error, results) => {
+        if (error) throw error;
+ 
+        
+        pool.query('COMMIT', (err) => {
+            if (err) {
+                
+                throw err;
+            }
+            console.log('Transaction completed.');
+        });
+ 
+        res.status(200).send("ok");
+    });
+ });
+ 
+ app.listen(5500, () => {
+    console.log("Listening on port 5500");
+ });
+ 
