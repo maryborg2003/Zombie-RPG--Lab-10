@@ -73,3 +73,11 @@ body {
     align-items: center; 
     word-wrap: normal;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width:600px;
+  }
